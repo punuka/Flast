@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Titanic Survival Prediction</title></head>
+<body>
+<h2>Will you survive the Titanic?</h2>
+
+<form action="/predict" method="post">
+<label>Pclass:</label><input type="number" name="pclass" required><br>
+<label>Sex (0=Male, 1=Female):</label><input type="number" name="sex"
+required><br>
+<label>Age:</label><input type="number" name="age" required><br>
+<label>Fare:</label><input type="number" name="fare" required><br>
+<input type="submit" value="Predict">
+</form>
+{% if prediction_text %}
+<h3>{{ prediction_text }}</h3>
+{% endif %}
+</body>
+</html>
